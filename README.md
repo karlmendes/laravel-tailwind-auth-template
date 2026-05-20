@@ -667,7 +667,7 @@ Este projeto é de uso interno. Verifique com o responsável pelo projeto antes 
 
 ---
 
-<img width="1919" height="982" alt="image" src="https://github.com/user-attachments/assets/2f5f0278-c1e0-4ac9-9eda-b01dcffb7104" />
+<img width="1600" height="833" alt="image" src="https://github.com/user-attachments/assets/355cfe2c-e3b8-4a1e-8fe5-8aded558eff7" />
 <img width="1600" height="833" alt="image" src="https://github.com/user-attachments/assets/1e0708fe-ec6c-438e-9493-96a735dead6e" />
 <img width="1600" height="833" alt="image" src="https://github.com/user-attachments/assets/ebf5ae48-4cee-4c14-94da-1da96cca0b9d" />
 <img width="1919" height="982" alt="image" src="https://github.com/user-attachments/assets/e738578b-0a2a-48f2-bb21-60199f7d674b" />
