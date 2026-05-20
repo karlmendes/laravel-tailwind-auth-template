@@ -1,56 +1,33 @@
-# TailAdmin Laravel - Tailwind CSS Free Laravel Dashboard
+# Nome do Sistema
 
-**TailAdmin Laravel** is a modern, production-ready admin dashboard template powered by **Laravel 12**, **Tailwind CSS v4**, **Alpine.js**, and a clean, modular architecture. TailAdmin is one of the most popular Tailwind CSS dashboard now also available for Larvael. It’s designed for building fast, scalable admin panels, CRM dashboards, SaaS backends, and any data-driven application where clarity and performance matter.
-![TailAdmin - Next.js Dashboard Preview](./tailadmin-laravel.png)
+Sistema desenvolvido em **Laravel** com **TailwindCSS**, utilizando uma estrutura moderna para desenvolvimento web, com foco em organização, performance e facilidade de manutenção.
 
+---
 
-## Quick Links
+## Sobre o projeto
 
-* [✨ Get TailAdmin Laravel](https://tailadmin.com/laravel)
-* [📄 Documentation](https://tailadmin.com/docs)
-* [⬇️ Download](https://tailadmin.com/download)
-* [🌐 Live Demo](https://laravel-demo.tailadmin.com)
+Este projeto tem como objetivo disponibilizar uma aplicação web construída com Laravel no backend e TailwindCSS no frontend.
 
-Here’s a tighter, more search-friendly version that highlights value and avoids fluff while keeping your structure intact.
+A estrutura foi pensada para facilitar o desenvolvimento, a instalação local, a manutenção e a publicação em ambientes de homologação ou produção.
 
-## ✨ Key Features
+---
 
-* 🚀 **Laravel 12 Core** - Built on the latest Laravel release with improved routing, security, and Blade templating
-* 🎨 **Tailwind CSS v4** - Utility-first styling for rapid, consistent UI development
-* ⚡ **Alpine.js Interactivity** - Lightweight reactivity without a heavy JavaScript framework
-* 📦 **Vite Build System** - Fast dev server, instant HMR, and optimized production builds
-* 📱 **Fully Responsive Layouts** - Smooth, mobile-first design that adapts across all screen sizes
-* 🌙 **Built-in Dark Mode** - Ready-to-use modern dark theme for better usability and aesthetics
-* 📊 **Advanced UI Components** - Charts, data tables, forms, calendars, modals, and reusable blocks for complex dashboards
-* 🎯 **Production-Ready Dashboard UI** - Clean, modern interface crafted for real apps, not placeholder demos
+## Tecnologias utilizadas
 
-### Other Versions
+- PHP
+- Laravel
+- Composer
+- Node.js
+- NPM
+- TailwindCSS
+- Vite
+- Banco de dados relacional
 
-- [Next.js Version](https://github.com/TailAdmin/free-nextjs-admin-dashboard)
-- [React.js Version](https://github.com/TailAdmin/free-react-tailwind-admin-dashboard)
-- [Vue.js Version](https://github.com/TailAdmin/vue-tailwind-admin-dashboard)
-- [Angular Version](https://github.com/TailAdmin/free-angular-tailwind-dashboard)
-- [Laravel Version](https://github.com/TailAdmin/tailadmin-laravel)
+---
 
-## 📋 Requirements
-To set up TailAdmin Laravel, make sure your environment includes:
+## Pré-requisitos
 
-* **PHP 8.2+**
-* **Composer** (PHP dependency manager)
-* **Node.js 18+** and **npm** (for compiling frontend assets)
-* **Database** - Works with SQLite (default), MySQL, or PostgreSQL
-
-### Tailwind CSS Laravel Dashboard
-
-TailAdmin delivers a refined Tailwind CSS Laravel Dashboard experience, combining Laravel’s robust backend with Tailwind’s flexible utility classes. The result is a clean, fast, and customizable dashboard that helps developers build modern admin interfaces without the usual front-end complexity. It’s ideal for teams looking for a Tailwind-powered Laravel starter that stays lightweight and easy to scale.
-
-### Laravel Admin Dashboard
-
-If you’re searching for a dependable Laravel Admin Dashboard template that’s easy to set up and ready for production, TailAdmin fits the job. It offers a polished UI, reusable components, optimized performance, and all the essentials needed to launch dashboards, CRM systems, and internal tools quickly. It gives developers a solid foundation, so projects move faster with fewer decisions to worry about.
-
-### Check Your Environment
-
-Verify your installations:
+Antes de iniciar a instalação, certifique-se de ter instalado em sua máquina:
 
 ```bash
 php -v
@@ -59,372 +36,637 @@ node -v
 npm -v
 ```
 
-## 🚀 Quick Start Installation
+Também é necessário possuir um banco de dados configurado, como:
 
-### Step 1: Clone the Repository
+- MySQL
+- PostgreSQL
+- SQL Server
+- SQLite
+- Outro banco compatível com Laravel
+
+---
+
+## Instalação completa do projeto
+
+### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/TailAdmin/tailadmin-laravel.git
-cd tailadmin-laravel
+git clone URL_DO_REPOSITORIO
+cd NOME_DO_PROJETO
 ```
 
-### Step 2: Install PHP Dependencies
+---
+
+### 2. Instalar dependências PHP
 
 ```bash
 composer install
 ```
 
-This command will install all Laravel dependencies defined in `composer.json`.
+---
 
-### Step 3: Install Node.js Dependencies
+### 3. Instalar dependências frontend
 
 ```bash
 npm install
 ```
 
-Or if you prefer yarn or pnpm:
+---
 
-```bash
-# Using yarn
-yarn install
+### 4. Criar o arquivo de ambiente
 
-# Using pnpm
-pnpm install
-```
-
-### Step 4: Environment Configuration
-
-Copy the example environment file:
+Linux/macOS:
 
 ```bash
 cp .env.example .env
 ```
 
-**For Windows users:**
+Windows PowerShell:
 
-```bash
-copy .env.example .env
+```powershell
+Copy-Item .env.example .env
 ```
 
-**Or create it programmatically:**
+---
 
-```bash
-php -r "file_exists('.env') || copy('.env.example', '.env');"
+### 5. Configurar o arquivo `.env`
+
+Abra o arquivo `.env` e configure os dados principais da aplicação:
+
+```env
+APP_NAME="Nome do Sistema"
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost:8000
 ```
 
-### Step 5: Generate Application Key
-
-```bash
-php artisan key:generate
-```
-
-This creates a unique encryption key for your application.
-
-### Step 6: Configure Database
-
-#### Option A: Using MySQL/PostgreSQL
-
-Update your `.env` file with your database credentials:
+Configure também a conexão com o banco de dados:
 
 ```env
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
-DB_DATABASE=tailadmin_db
-DB_USERNAME=your_username
-DB_PASSWORD=your_password
+DB_DATABASE=nome_do_banco
+DB_USERNAME=usuario
+DB_PASSWORD=senha
 ```
 
-Create the database:
-
-```bash
-# MySQL
-mysql -u root -p -e "CREATE DATABASE tailadmin_db;"
-
-# PostgreSQL
-createdb tailadmin_db
-```
-
-Run migrations:
-
-```bash
-php artisan migrate
-```
-
-### Step 7: (Optional) Seed the Database
-
-If you want sample data:
-
-```bash
-php artisan db:seed
-```
-
-### Step 8: Storage Link
-
-Create a symbolic link for file storage:
-
-```bash
-php artisan storage:link
-```
-
-## 🏃 Running the Application
-
-### Development Mode (Recommended)
-
-The easiest way to start development is using the built-in script:
-
-```bash
-composer run dev
-```
-
-This single command starts:
-- ✅ Laravel development server (http://localhost:8000)
-- ✅ Vite dev server for hot module reloading
-- ✅ Queue worker for background jobs
-- ✅ Log monitoring
-
-**Access your application at:** [http://localhost:8000](http://localhost:8000)
-
-### Manual Development Setup
-
-If you prefer to run services individually in separate terminal windows:
-
-**Terminal 1 - Laravel Server:**
-```bash
-php artisan serve
-```
-
-**Terminal 2 - Frontend Assets:**
-```bash
-npm run dev
-```
-
-### Building for Production
-
-#### Build Frontend Assets
-
-```bash
-npm run build
-```
-
-#### Optimize Laravel
-
-```bash
-# Clear and cache configuration
-php artisan config:cache
-
-# Cache routes
-php artisan route:cache
-
-# Cache views
-php artisan view:cache
-
-# Optimize autoloader
-composer install --optimize-autoloader --no-dev
-```
-
-#### Production Environment
-
-Update your `.env` for production:
+Exemplo usando PostgreSQL:
 
 ```env
-APP_ENV=production
-APP_DEBUG=false
-APP_URL=https://yourdomain.com
+DB_CONNECTION=pgsql
+DB_HOST=127.0.0.1
+DB_PORT=5432
+DB_DATABASE=nome_do_banco
+DB_USERNAME=usuario
+DB_PASSWORD=senha
 ```
 
+---
 
-## 🧪 Testing
-
-Run the test suite using Pest:
-
-```bash
-composer run test
-```
-
-Or manually:
+### 6. Gerar a chave da aplicação
 
 ```bash
-php artisan test
-```
-
-Run with coverage:
-
-```bash
-php artisan test --coverage
-```
-
-Run specific tests:
-
-```bash
-php artisan test --filter=ExampleTest
-```
-
-## 📜 Available Commands
-
-### Composer Scripts
-
-```bash
-# Start development environment
-composer run dev
-
-# Run tests
-composer run test
-
-# Code formatting (if configured)
-composer run format
-
-# Static analysis (if configured)
-composer run analyze
-```
-
-### NPM Scripts
-
-```bash
-# Start Vite dev server
-npm run dev
-
-# Build for production
-npm run build
-
-# Preview production build
-npm run preview
-
-# Lint JavaScript/TypeScript
-npm run lint
-
-# Format code
-npm run format
-```
-
-### Artisan Commands
-
-```bash
-# Start development server
-php artisan serve
-
-# Run migrations
-php artisan migrate
-
-# Rollback migrations
-php artisan migrate:rollback
-
-# Fresh migrations with seeding
-php artisan migrate:fresh --seed
-
-# Generate application key
 php artisan key:generate
-
-# Clear all caches
-php artisan optimize:clear
-
-# Cache everything for production
-php artisan optimize
-
-# Create symbolic link for storage
-php artisan storage:link
-
-# Start queue worker
-php artisan queue:work
-
-# List all routes
-php artisan route:list
-
-# Create a new controller
-php artisan make:controller YourController
-
-# Create a new model
-php artisan make:model YourModel -m
-
-# Create a new migration
-php artisan make:migration create_your_table
 ```
 
-## 📁 Project Structure
+Este comando irá preencher automaticamente a variável `APP_KEY` no arquivo `.env`.
 
-```
-tailadmin-laravel/
-├── app/                    # Application logic
-│   ├── Http/              # Controllers, Middleware, Requests
-│   ├── Models/            # Eloquent models
-│   └── Providers/         # Service providers
-├── bootstrap/             # Framework bootstrap files
-├── config/                # Configuration files
-├── database/              # Migrations, seeders, factories
-│   ├── migrations/
-│   ├── seeders/
-│   └── factories/
-├── public/                # Public assets (entry point)
-│   ├── build/            # Compiled assets (generated)
-│   └── index.php         # Application entry point
-├── resources/             # Views and raw assets
-│   ├── css/              # Stylesheets (Tailwind)
-│   ├── js/               # JavaScript files (Alpine.js)
-│   └── views/            # Blade templates
-├── routes/                # Route definitions
-│   ├── web.php           # Web routes
-│   ├── api.php           # API routes
-│   └── console.php       # Console routes
-├── storage/               # Logs, cache, uploads
-│   ├── app/
-│   ├── framework/
-│   └── logs/
-├── tests/                 # Pest test files
-│   ├── Feature/
-│   └── Unit/
-├── .env.example           # Example environment file
-├── artisan                # Artisan CLI
-├── composer.json          # PHP dependencies
-├── package.json           # Node dependencies
-├── vite.config.js         # Vite configuration
-└── tailwind.config.js     # Tailwind configuration
-```
+---
 
-## 🐛 Troubleshooting
+### 7. Executar as migrations
 
-### Common Issues
-
-#### "Class not found" errors
 ```bash
-composer dump-autoload
+php artisan migrate
 ```
 
-#### Permission errors on storage/bootstrap/cache
+Caso o projeto possua seeders:
+
+```bash
+php artisan migrate --seed
+```
+
+Para recriar toda a base em ambiente local:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+> Atenção: o comando `migrate:fresh` apaga todas as tabelas antes de recriá-las.
+
+---
+
+### 8. Executar o servidor Laravel
+
+```bash
+php artisan serve
+```
+
+Por padrão, o sistema ficará disponível em:
+
+```text
+http://localhost:8000
+```
+
+---
+
+### 9. Executar o Vite
+
+Em outro terminal, execute:
+
+```bash
+npm run dev
+```
+
+Esse comando compila os arquivos frontend em modo desenvolvimento e permite visualizar as alterações de CSS e JavaScript em tempo real.
+
+---
+
+### 10. Acessar o sistema
+
+Acesse no navegador:
+
+```text
+http://localhost:8000
+```
+
+---
+
+## Instalação rápida
+
+Use este bloco caso queira executar os comandos principais em sequência.
+
+Linux/macOS:
+
+```bash
+git clone URL_DO_REPOSITORIO
+cd NOME_DO_PROJETO
+composer install
+npm install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+npm run dev
+php artisan serve
+```
+
+Windows PowerShell:
+
+```powershell
+git clone URL_DO_REPOSITORIO
+cd NOME_DO_PROJETO
+composer install
+npm install
+Copy-Item .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+npm run dev
+php artisan serve
+```
+
+---
+
+## Executando o projeto
+
+Para executar o backend Laravel:
+
+```bash
+php artisan serve
+```
+
+Para executar o frontend com TailwindCSS e Vite:
+
+```bash
+npm run dev
+```
+
+Acesse:
+
+```text
+http://localhost:8000
+```
+
+---
+
+## Build de produção
+
+Para gerar os arquivos otimizados de frontend:
+
+```bash
+npm run build
+```
+
+Em ambiente de produção, instale as dependências PHP sem pacotes de desenvolvimento:
+
+```bash
+composer install --no-dev --optimize-autoloader
+```
+
+Execute as otimizações do Laravel:
+
+```bash
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+php artisan optimize
+```
+
+Execute as migrations em produção:
+
+```bash
+php artisan migrate --force
+```
+
+---
+
+## Variáveis de ambiente importantes
+
+Abaixo estão algumas das principais variáveis utilizadas no arquivo `.env`:
+
+```env
+APP_NAME="Nome do Sistema"
+APP_ENV=local
+APP_KEY=
+APP_DEBUG=true
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=nome_do_banco
+DB_USERNAME=usuario
+DB_PASSWORD=senha
+```
+
+Caso o sistema utilize envio de e-mail, configure também:
+
+```env
+MAIL_MAILER=smtp
+MAIL_HOST=
+MAIL_PORT=
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_ENCRYPTION=
+MAIL_FROM_ADDRESS=
+MAIL_FROM_NAME="${APP_NAME}"
+```
+
+---
+
+## Comandos úteis
+
+Limpar todos os caches da aplicação:
+
+```bash
+php artisan optimize:clear
+```
+
+Limpar cache de configuração:
+
+```bash
+php artisan config:clear
+```
+
+Limpar cache de rotas:
+
+```bash
+php artisan route:clear
+```
+
+Limpar cache de views:
+
+```bash
+php artisan view:clear
+```
+
+Listar rotas disponíveis:
+
+```bash
+php artisan route:list
+```
+
+Executar migrations:
+
+```bash
+php artisan migrate
+```
+
+Reverter a última migration:
+
+```bash
+php artisan migrate:rollback
+```
+
+Recriar o banco em ambiente local:
+
+```bash
+php artisan migrate:fresh --seed
+```
+
+Executar servidor local:
+
+```bash
+php artisan serve
+```
+
+Executar frontend em modo desenvolvimento:
+
+```bash
+npm run dev
+```
+
+Gerar build frontend:
+
+```bash
+npm run build
+```
+
+---
+
+## Estrutura principal do projeto
+
+```text
+app/
+├── Http/
+│   ├── Controllers/
+│   └── Middleware/
+├── Models/
+└── Providers/
+
+bootstrap/
+└── cache/
+
+config/
+
+database/
+├── migrations/
+├── seeders/
+└── factories/
+
+public/
+└── index.php
+
+resources/
+├── css/
+├── js/
+└── views/
+
+routes/
+├── web.php
+└── api.php
+
+storage/
+├── app/
+├── framework/
+└── logs/
+```
+
+---
+
+## Permissões em ambiente Linux
+
+Em servidores Linux, pode ser necessário liberar permissão de escrita para os diretórios abaixo:
+
 ```bash
 chmod -R 775 storage bootstrap/cache
 ```
 
-#### NPM build errors
+Dependendo da configuração do servidor web:
+
+```bash
+chown -R www-data:www-data storage bootstrap/cache
+```
+
+---
+
+## Possíveis problemas
+
+### Erro: `No application encryption key has been specified`
+
+Execute:
+
+```bash
+php artisan key:generate
+```
+
+---
+
+### Erro de conexão com banco de dados
+
+Verifique as configurações no arquivo `.env`:
+
+```env
+DB_CONNECTION=
+DB_HOST=
+DB_PORT=
+DB_DATABASE=
+DB_USERNAME=
+DB_PASSWORD=
+```
+
+Depois execute:
+
+```bash
+php artisan config:clear
+```
+
+---
+
+### Alterei o `.env`, mas o sistema não reconheceu
+
+Execute:
+
+```bash
+php artisan optimize:clear
+```
+
+---
+
+### TailwindCSS não atualiza as alterações
+
+Verifique se o Vite está rodando:
+
+```bash
+npm run dev
+```
+
+Confirme também se o layout principal do Laravel possui a diretiva:
+
+```blade
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+```
+
+---
+
+### Erro ao instalar dependências do NPM
+
+Remova as dependências antigas e instale novamente.
+
+Linux/macOS:
+
 ```bash
 rm -rf node_modules package-lock.json
 npm install
 ```
 
-#### Clear all caches
-```bash
-php artisan optimize:clear
+Windows PowerShell:
+
+```powershell
+Remove-Item -Recurse -Force node_modules
+Remove-Item package-lock.json
+npm install
 ```
 
-#### Database connection errors
-- Check `.env` database credentials
-- Ensure database server is running
-- Verify database exists
+---
 
-## 🔄 Update Log
+### Erro ao instalar dependências do Composer
 
-### [April 28, 2026]
-- Added **AI Dashboard** with token usage and revenue tracking.
-- Added **Sales Dashboard** with retention and multi-channel analytics.
-- Added **Finance Dashboard** with cashflow and balance management.
-- Introduced **6 New Layout variations** for improved UI flexibility.
-- Integrated **Advanced Data Visualization** with 7+ new chart types.
+Tente limpar o cache do Composer:
 
-### [2026-03-15]
-- Fixed PHP 8.5 deprecation warning
+```bash
+composer clear-cache
+composer install
+```
 
-### [2025-12-29]
-- Added Date Picker in Statistics Chart
+Caso necessário, atualize as dependências:
 
-## License
+```bash
+composer update
+```
 
-Refer to our [LICENSE](https://tailadmin.com/license) page for more information.
+---
+
+### Página sem estilo CSS
+
+Verifique se o Vite está em execução:
+
+```bash
+npm run dev
+```
+
+Ou gere o build de produção:
+
+```bash
+npm run build
+```
+
+Também confirme se os arquivos estão sendo chamados no layout principal:
+
+```blade
+@vite(['resources/css/app.css', 'resources/js/app.js'])
+```
+
+---
+
+## Checklist de instalação
+
+- [ ] Repositório clonado
+- [ ] Dependências PHP instaladas
+- [ ] Dependências frontend instaladas
+- [ ] Arquivo `.env` criado
+- [ ] Banco de dados configurado
+- [ ] Chave da aplicação gerada
+- [ ] Migrations executadas
+- [ ] Seeders executados, se necessário
+- [ ] Servidor Laravel iniciado
+- [ ] Vite executando
+- [ ] Sistema acessível no navegador
+
+---
+
+## Fluxo recomendado de desenvolvimento
+
+1. Criar uma nova branch:
+
+```bash
+git checkout -b minha-alteracao
+```
+
+2. Realizar as alterações necessárias.
+
+3. Executar os testes ou validações locais.
+
+4. Fazer o commit:
+
+```bash
+git add .
+git commit -m "Descrição da alteração"
+```
+
+5. Enviar a branch para o repositório:
+
+```bash
+git push origin minha-alteracao
+```
+
+6. Abrir um Pull Request.
+
+---
+
+## Boas práticas
+
+- Não versionar o arquivo `.env`.
+- Manter o arquivo `.env.example` atualizado.
+- Não subir senhas, tokens ou chaves privadas no repositório.
+- Executar `php artisan optimize:clear` após alterações importantes de ambiente.
+- Utilizar branches para novas funcionalidades e correções.
+- Revisar migrations antes de executar em produção.
+- Rodar `npm run build` antes de publicar o frontend em produção.
+
+---
+
+## Deploy em produção
+
+Checklist recomendado para publicação:
+
+- [ ] Atualizar código no servidor
+- [ ] Instalar dependências PHP de produção
+- [ ] Instalar dependências frontend
+- [ ] Gerar build com Vite
+- [ ] Configurar `.env` de produção
+- [ ] Executar migrations com `--force`
+- [ ] Limpar caches antigos
+- [ ] Gerar novos caches
+- [ ] Validar permissões de diretório
+- [ ] Testar acesso ao sistema
+
+Comandos principais:
+
+```bash
+composer install --no-dev --optimize-autoloader
+npm install
+npm run build
+php artisan migrate --force
+php artisan optimize:clear
+php artisan config:cache
+php artisan route:cache
+php artisan view:cache
+php artisan optimize
+```
+
+---
+
+## Segurança
+
+Antes de publicar o projeto, verifique:
+
+- `APP_ENV=production`
+- `APP_DEBUG=false`
+- `APP_URL` configurado com a URL correta
+- Banco de dados configurado corretamente
+- Arquivo `.env` protegido
+- Permissões adequadas nos diretórios `storage` e `bootstrap/cache`
+- Chaves e tokens fora do controle de versão
+
+---
+
+## Licença
+
+Este projeto é de uso interno. Verifique com o responsável pelo projeto antes de copiar, distribuir ou reutilizar qualquer parte do código.
+
+---
+
+## Autor
+
+Desenvolvido por **Karl Daniel Mendes**.
