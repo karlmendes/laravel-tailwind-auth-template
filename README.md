@@ -1,4 +1,4 @@
-# Nome do Sistema
+# Laravel TailWind Admin
 
 Sistema desenvolvido em **Laravel** com **TailwindCSS**, utilizando uma estrutura moderna para desenvolvimento web, com foco em organização, performance e facilidade de manutenção.
 
@@ -51,7 +51,7 @@ Também é necessário possuir um banco de dados configurado, como:
 ### 1. Clonar o repositório
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/karlmendes/laravel-tailwind-auth-template.git
 cd NOME_DO_PROJETO
 ```
 
@@ -200,7 +200,7 @@ Use este bloco caso queira executar os comandos principais em sequência.
 Linux/macOS:
 
 ```bash
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/karlmendes/laravel-tailwind-auth-template.git
 cd NOME_DO_PROJETO
 composer install
 npm install
@@ -214,7 +214,7 @@ php artisan serve
 Windows PowerShell:
 
 ```powershell
-git clone URL_DO_REPOSITORIO
+git clone https://github.com/karlmendes/laravel-tailwind-auth-template.git
 cd NOME_DO_PROJETO
 composer install
 npm install
