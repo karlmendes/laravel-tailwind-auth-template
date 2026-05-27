@@ -5,31 +5,31 @@ return [
         'title' => 'Dashboard',
         'route' => 'admin.dashboard',
         'icon' => 'home',
-        'can' => null,
+        'can' => 'dashboard.access',
     ],
 
     [
         'title' => 'Gerenciar',
         'icon' => 'folder',
-        'can' => null,
+        'can' => 'manage.access',
         'children' => [
             [
                 'title' => 'Usuários',
                 'route' => 'admin.users.index',
                 'icon' => 'users',
-                'can' => null,
+                'can' => 'users.access',
             ],
             [
                 'title' => 'Grupos',
                 'route' => 'admin.roles.index',
                 'icon' => 'shield',
-                'can' => null,
+                'can' => 'roles.access',
             ],
             [
                 'title' => 'Permissões',
                 'route' => 'admin.permissions.index',
                 'icon' => 'key',
-                'can' => null,
+                'can' => 'permissions.access',
             ],
         ],
     ],

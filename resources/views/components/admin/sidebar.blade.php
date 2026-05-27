@@ -25,12 +25,12 @@
                 @php
                     $hasChildren = isset($menu['children']) && count($menu['children']) > 0;
 
-                    $canViewMenu = empty($menu['permission']) || auth()->user()->can($menu['permission']);
+                    $canViewMenu = empty($menu['can']) || auth()->user()->can($menu['can']);
 
                     if ($hasChildren) {
                         $visibleChildren = collect($menu['children'])
                             ->filter(function ($child) {
-                                return empty($child['permission']) || auth()->user()->can($child['permission']);
+                                return empty($child['can']) || auth()->user()->can($child['can']);
                             })
                             ->values()
                             ->all();
